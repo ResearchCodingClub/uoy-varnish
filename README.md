@@ -1,11 +1,15 @@
-# {varnish}: Template for The Carpentries Workbench <img src='man/figures/logo.png' align='right' alt='' width=120 />
+# {uos_varnish}: Template for The Carpentries Workbench <img src='man/figures/logo.png' align='right' alt='' width=120 />
 
-[![varnish status badge](https://carpentries.r-universe.dev/badges/varnish)](https://carpentries.r-universe.dev)
-
-This project is part of [The Carpentries
+This project is a University of Sheffield themed fork of [{varnish}] from [The Carpentries
 Workbench](https://carpentries.github.io/workbench). It serves as a template
-for Carpentries lessons adapted from [{pkgdown}]. There is no need to call this
-package directly, it is installed via the [{sandpaper}] package.
+for internally developed Carpentries style lessons. As this is a bespoke theme, 
+it must be installed directly, rather than using the default that is installed
+via the [{sandpaper}] package.
+
+The changes to the theme replace The Carpentries branding with the University of
+Sheffield [brand toolkit](https://www.sheffield.ac.uk/brand-toolkit).
+Additionally, relevant additional links to training resources have been included
+in the footer.
 
 The html templates use [mustache templating
 language](https://mustache.github.io/mustache.5.html) while the CSS and
@@ -13,15 +17,23 @@ JavaScript are compiled and minified on GitHub Actions.
 
 ## Installation
 
-To install this package, you can use our [R-universe repository](https://carpentries.r-universe.dev),
-which is updated hourly.
+This fork of varnish should **not** be used in official carpentries repositories,
+it is intended for internally developed courses at the University of Sheffield.
 
-```r
-install.packages("varnish", repos = "https://carpentries.r-universe.dev")
+In order to use this fork of varnish you must update `config.yaml` to include the
+below lines (update `[user]` and `[repo]` as necessary, or replacing the line with
+a custom domain if required).
+
+```yaml
+varnish: RSE-Sheffield/uos-varnish@main
+url: '[user].github.io/[repo]'
 ```
 
-There is no need to call this package directly, [{sandpaper}] will detect it and
-copy the styling and templates to your lesson website.
+There is no need to call this package directly, once `config.yaml` has been updated
+[{sandpaper}] will detect it and copy the styling and templates to your lesson website.
+
+Once `config.yaml`, typical guides from The Carpentries can be followed to deploy
+locally or to GitHub pages.
 
 ## CSS and JavaScript
 
@@ -140,9 +152,10 @@ For example, this adds a paragraph describing the license provided that the
  - `{{ aio }}`: a boolean indicating that the aio page should be included
  - `{{ this_page }}`: The file-only HTML path of the current page (e.g. `index.html` or `introduction.html`).
  - `{{{ schedule }}}`: The HTML sidebar of the schedule of episodes. 
- - `{{{ resources }}}`: an additional part of the sidebar giving extra resource elements avaialable in mobile view.
+ - `{{{ resources }}}`: an additional part of the sidebar giving extra resource elements available in mobile view.
 
 [{pkgdown}]: https://r-lib.github.io/pkgdown
+[{varnish}]: https://github.com/carpentries/varnish
 [{sandpaper}]: https://github.com/zkamvar/sandpaper
 [content-chapter]: inst/pkgdown/templates/content-chapter.html
 [content-syllabus]: inst/pkgdown/templates/content-syllabus.html
