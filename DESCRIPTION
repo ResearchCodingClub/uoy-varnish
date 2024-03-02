@@ -44,6 +44,11 @@ Authors@R: c(
            family = "Theodorakis",
            role = c("ctb"),
            email = "astrodimitrios@gmail.com"),
+    person(given = "Neil",
+           family = "Shephard",
+           role = c("ctb"),
+           email = "n.shephard@sheffield.ac.uk",
+           comment = c(ORCID = "0000-0001-8301-6857")),
     person(given = "Olexandr",
            family = "Konovalov",
            role = c("ctb"),
@@ -55,11 +60,7 @@ Authors@R: c(
            email = "cs.matthewarmstrong@gmail.com"),
     person(given = "Sheargrub",
            role = c("ctb"),
-           email = "sheargrub@gmail.com")
-    person(given = "Neil",
-           family = "Shephard",
-           role = c("ctb"),
-           comment = c(ORCID = "0000-0001-8301-6857")),
+           email = "sheargrub@gmail.com"),
     person()
     )
 Description: This package does nothing but contain template HTML CSS and JS files.
