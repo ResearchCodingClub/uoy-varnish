@@ -34,16 +34,25 @@ There is no need to call this package directly, once `config.yaml` has been upda
 [{sandpaper}] will detect it and copy the styling and templates to your lesson
 website when building in GitHub pages.
 
-Once `config.yaml` has been customised, typical guides from The Carpentries can be
+Once `config.yaml` has been customised, [typical
+guides](https://carpentries.github.io/sandpaper) from The Carpentries can be
 followed to deploy locally or to GitHub pages.
 
 ### Applying Varnish locally
 
 When rendering the site locally the varnish will not, by default, be applied since
-it is not available. A few extra steps to setup up a [{renv}] and install the
-necessary packages are required.
+it is not available. A few extra steps to setup up and install the necessary
+packages are required. You can install the varnish system wide using [{devtools}]
 
-Initialise an `renv` in the workbench repository you have cloned.
+``` r
+> install.packages("devtools")
+> devtools::install_github("RSE-Sheffield/uos-varnish")
+```
+
+Alternatively you can install the varnish under a [{renv}].
+If you don't already have `renv` installed then install it with
+`install.packages("renv")`. Then initialise an `renv` in the workbench repository
+you have cloned.
 
 ``` bash
 cd ~/path/to/workbench/repo/
@@ -51,7 +60,7 @@ Rscript -e "renv::init()"
 ```
 
 Start R and install this varnish and the [{sandpaper}] package (which will pull in
-all dependencies).
+all dependencies) in the `renv` and snapshot it.
 
 ``` r
 > renv::install("RSE-Sheffield/uos-varnish")
@@ -65,12 +74,11 @@ all dependencies).
 You can now build and serve the pages with University of Sheffield varnish.
 
 ``` r
-> library(uosvarnish)
 > sandpaper::serve()
 ```
 
-**NB** If you find the varnish _isn't_ applied then first load the library with
-`library(uosvarnish)`.
+**NB** If you find the varnish _isn't_ applied then you may need to first load
+the library with `library(uosvarnish)`.
 
 ## CSS and JavaScript
 
@@ -191,6 +199,7 @@ For example, this adds a paragraph describing the license provided that the
  - `{{{ schedule }}}`: The HTML sidebar of the schedule of episodes.
  - `{{{ resources }}}`: an additional part of the sidebar giving extra resource elements available in mobile view.
 
+[{devtools}]: https://devtools.r-lib.org
 [{pkgdown}]: https://r-lib.github.io/pkgdown
 [{varnish}]: https://github.com/carpentries/varnish
 [{sandpaper}]: https://github.com/zkamvar/sandpaper
