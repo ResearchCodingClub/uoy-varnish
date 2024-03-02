@@ -2,7 +2,7 @@
 
 This project is a University of Sheffield themed fork of [{varnish}] from [The Carpentries
 Workbench](https://carpentries.github.io/workbench). It serves as a template
-for internally developed Carpentries style lessons. As this is a bespoke theme, 
+for internally developed Carpentries style lessons. As this is a bespoke theme,
 it must be installed directly, rather than using the default that is installed
 via the [{sandpaper}] package.
 
@@ -21,7 +21,8 @@ This fork of varnish should **not** be used in official carpentries repositories
 it is intended for internally developed courses at the University of Sheffield.
 
 In order to use this fork of varnish you must update `config.yaml` to include the
-below lines (update `[user]` and `[repo]` as necessary, or replacing the line with
+below lines under the `# Customisation` section (update `[user]` with your
+user/organisation  and `[repo]` with the repository name replacing the line with
 a custom domain if required).
 
 ```yaml
@@ -30,10 +31,46 @@ url: '[user].github.io/[repo]'
 ```
 
 There is no need to call this package directly, once `config.yaml` has been updated
-[{sandpaper}] will detect it and copy the styling and templates to your lesson website.
+[{sandpaper}] will detect it and copy the styling and templates to your lesson
+website when building in GitHub pages.
 
-Once `config.yaml`, typical guides from The Carpentries can be followed to deploy
-locally or to GitHub pages.
+Once `config.yaml` has been customised, typical guides from The Carpentries can be
+followed to deploy locally or to GitHub pages.
+
+### Applying Varnish locally
+
+When rendering the site locally the varnish will not, by default, be applied since
+it is not available. A few extra steps to setup up a [{renv}] and install the
+necessary packages are required.
+
+Initialise an `renv` in the workbench repository you have cloned.
+
+``` bash
+cd ~/path/to/workbench/repo/
+Rscript -e "renv::init()"
+```
+
+Start R and install this varnish and the [{sandpaper}] package (which will pull in
+all dependencies).
+
+``` r
+> renv::install("RSE-Sheffield/uos-varnish")
+> options(repos = c(
+    carpentries = "https://carpentries.r-universe.dev/",
+    CRAN = "https://cran.rstudio.com/"))
+> renv::install("sandpaper", dep = TRUE)
+> renv::snapshot()
+```
+
+You can now build and serve the pages with University of Sheffield varnish.
+
+``` r
+> library(uosvarnish)
+> sandpaper::serve()
+```
+
+**NB** If you find the varnish _isn't_ applied then first load the library with
+`library(uosvarnish)`.
 
 ## CSS and JavaScript
 
@@ -42,7 +79,7 @@ uglifyjs. Their sources live in the [`source/`](source/) folder with directives
 to include their dependencies (bootstrap, jquery, feather).
 
 The minified versions are built via GitHub actions any time one of the source
-files is changed. 
+files is changed.
 
 To build this locally, you need to make sure to have a working version of
 `node` and `npm`, which can be installed [via the node version manager, nvm](https://github.com/nvm-sh/nvm#intro).
@@ -133,7 +170,7 @@ template:
 
 Each of these parameters can be accessed via the `{{ yaml }}` mustache context.
 For example, this adds a paragraph describing the license provided that the
-`{{ license }}` parameter is present in the yaml: 
+`{{ license }}` parameter is present in the yaml:
 
 ```html
 {{#yaml}}{{#license}}
@@ -151,7 +188,7 @@ For example, this adds a paragraph describing the license provided that the
  - `{{ instructor }}`: a boolean indicating instructor view
  - `{{ aio }}`: a boolean indicating that the aio page should be included
  - `{{ this_page }}`: The file-only HTML path of the current page (e.g. `index.html` or `introduction.html`).
- - `{{{ schedule }}}`: The HTML sidebar of the schedule of episodes. 
+ - `{{{ schedule }}}`: The HTML sidebar of the schedule of episodes.
  - `{{{ resources }}}`: an additional part of the sidebar giving extra resource elements available in mobile view.
 
 [{pkgdown}]: https://r-lib.github.io/pkgdown
@@ -165,3 +202,4 @@ For example, this adds a paragraph describing the license provided that the
 [layout]: inst/pkgdown/templates/layout.html
 [navbar]: inst/pkgdown/templates/navbar.html
 [footer]: inst/pkgdown/templates/footer.html
+[{renv}]: https://rstudio.github.io/renv/articles/renv.html

@@ -1,4 +1,4 @@
-Package: varnish
+Package: uosvarnish
 Title: Front-end for The Carpentries Lesson Infrastructure
 Version: 1.0.7
 Authors@R: c(
@@ -55,7 +55,11 @@ Authors@R: c(
            email = "cs.matthewarmstrong@gmail.com"),
     person(given = "Sheargrub",
            role = c("ctb"),
-           email = "sheargrub@gmail.com"),
+           email = "sheargrub@gmail.com")
+    person(given = "Neil",
+           family = "Shephard",
+           role = c("ctb"),
+           comment = c(ORCID = "0000-0001-8301-6857")),
     person()
     )
 Description: This package does nothing but contain template HTML CSS and JS files.
@@ -64,5 +68,5 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
-URL: https://carpentries.github.io/varnish/
-BugReports: https://github.com/carpentries/varnish/issues/
+URL: https://github.com/RSE-Sheffield/uos-varnish
+BugReports: https://github.com/RSE-Sheffield/uos-varnish/issues/
