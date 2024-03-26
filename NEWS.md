@@ -117,7 +117,7 @@
 We are bumping the major version number with this release because this version
 of {varnish} now requires a new set of `translate` variables to be passed (which
 are provided by sandpaper >= 0.16.0). If these variables do not exist, the
-template will contain no navigation text. 
+template will contain no navigation text.
 
 This breaking change is a concious decision. The alternative for this was to
 conditinally include translations and fall back to their hard-coded English text
@@ -126,7 +126,7 @@ lead to upstream bugs that are difficult to detect (if translations are not
 working, it's not clear what is the cause if the text is in English: is it
 coming from {varnish} or is it coming from {sandpaper}?) and it makes
 maintenance of these navigational elements more difficult because we would have
-to update them in two places. 
+to update them in two places.
 
 ## NEW FEATURES
 
@@ -144,11 +144,11 @@ to update them in two places.
 
 * Overview box heading font sizes now scaled based on viewport size. This fixes
   issues where the heading would wrap in an ugly fashion.
-  (reported: @jd-foster, #83, 
+  (reported: @jd-foster, #83,
   @drmownickles, https://github.com/carpentries/workbench/issues/57,
-  @rbavery, https://github.com/carpentries/workbench/issues/64, 
+  @rbavery, https://github.com/carpentries/workbench/issues/64,
   @robadob, #111; fixed:
-  @froggleston, #109, 
+  @froggleston, #109,
   @robadob, #112).
 * Spacing and alignment of text improved in Software Carpentry logo.
   (reported: @tobyhodges, #107; fixed @tobyhodges, #110).
@@ -169,18 +169,18 @@ Added @robadob as a contributor.
 # varnish 0.3.3
 
 * Code blocks in narrative no longer have a white background on top of the grey
-  background of the code block (fixed: @zkamvar, #103). 
+  background of the code block (fixed: @zkamvar, #103).
 - The colour of the inline code has been changed from the bootstrap default to
-  black (fixed: @zkamvar, #103). 
+  black (fixed: @zkamvar, #103).
 
 # varnish 0.3.2
 
 * Provide an improved contrast to inline code within callout blocks by
-  setting the background-color to #FFFFFF (reported: @sarahmbrown, 
-  https://github.com/carpentries/workbench/issues/76 (#99); fixed 
+  setting the background-color to #FFFFFF (reported: @sarahmbrown,
+  https://github.com/carpentries/workbench/issues/76 (#99); fixed
   @froggleston, #100)
 * Back and forward navigation titles have been fixed to keep raw content and
-  not escape characters (reported: @tobyhodges, 
+  not escape characters (reported: @tobyhodges,
   https://github.com/carpentries/workbench/issues/71 (#98); fixed
   @froggleston, #101)
 
@@ -219,7 +219,7 @@ Added @robadob as a contributor.
 # varnish 0.2.17
 
 * The margin below the schedule table in instructor view is now 25px instead of
-  225px (reported: @bencomp, #81; fixed: @bencomp, #82). 
+  225px (reported: @bencomp, #81; fixed: @bencomp, #82).
 
 # varnish 0.2.16
 
@@ -241,7 +241,7 @@ Added @robadob as a contributor.
 # varnish 0.2.13
 
 * Table display CSS is set to `table` as opposed to `block`, thus ensuring it is
-  represented correctly in the accessibility tree (see 
+  represented correctly in the accessibility tree (see
   <https://developer.mozilla.org/en-US/docs/Web/CSS/display#tables>).
   (fixed: @zkamvar, #74)
 * Table headings are now bold to easily distinguish from table contents.
@@ -262,7 +262,7 @@ Added @robadob as a contributor.
 
 # varnish 0.2.10
 
-* Fix issue with bullet points in callouts being mis-aligned 
+* Fix issue with bullet points in callouts being mis-aligned
   (reported: @sstevens2, #68; fixed: @zkamvar, #69)
 
 # varnish 0.2.9
@@ -282,7 +282,7 @@ Added @robadob as a contributor.
 # varnish 0.2.6
 
 * For lessons that use `workbench-beta: true`, the feedback URL has changed from
-  <https://github.com/carpentries/workbench/discussions/> to 
+  <https://github.com/carpentries/workbench/discussions/> to
   <https://carpentries.typeform.com/to/KRBl4IZM>, so that we can get more
   specific feedback.
 
@@ -298,40 +298,40 @@ Added @robadob as a contributor.
 * Callout block titles have been improved: The underline height for titles have
   been fixed to not look wonky when titles have multiple lines (reported:
   @anenadic, #53; fixed @zkamvar, #55). Moreover, the text transformation will
-  no longer affect `code` and `kbd` elements. 
-* Heading element sizes have been recoded to use relative units. There was not 
+  no longer affect `code` and `kbd` elements.
+* Heading element sizes have been recoded to use relative units. There was not
   enough specification in the original CSS to properly distinguish between H3
   and H4 elements; moreover, on tablet and mobile devices, the H1 heading looked
   smallter than the H2 heading due to a copy/paste error. This has been fixed by
   using relative calcualtions (@zkamvar, #55)
-* Sidebar navigation now says "Episodes" instead of "Expand" when collapsed so 
+* Sidebar navigation now says "Episodes" instead of "Expand" when collapsed so
   that it is less confusing for folks. (suggested by @drmowinckels,
-  https://github.com/carpentries/workbench/issues/16 (#47); fixed by @zkamvar, 
+  https://github.com/carpentries/workbench/issues/16 (#47); fixed by @zkamvar,
   #56)
 * The collapsed sidebar label no longer reverts to saying "collapse" on a new
-  page. 
+  page.
 * The hamburger menu for mobile devices now has a border so it's more clear
   that it is a menu (suggested by @drmowinckels,
-  https://github.com/carpentries/workbench/issues/16 (#47); fixed by @zkamvar, 
+  https://github.com/carpentries/workbench/issues/16 (#47); fixed by @zkamvar,
   #57)
 
 
 # varnish 0.2.3
 
-* Add support for displaying anchor links (requested @fiveop, 
-  https://github.com/carpentries/sandpaper/issues/285 and @anenadic, 
+* Add support for displaying anchor links (requested @fiveop,
+  https://github.com/carpentries/sandpaper/issues/285 and @anenadic,
   https://github.com/carpentries/workbench/issues/28; added: #54 by @zkamvar)
 
 # varnish 0.2.2
 
 * Formatting of list elements in the solutions and instructor notes now follows
-  the same formatting as the rest of the content (reported: #51 by @tobyhodges, 
+  the same formatting as the rest of the content (reported: #51 by @tobyhodges,
   fixed: #52 by @zkamvar)
 
 # varnish 0.2.1
 
-* The sidebar navigation in mobile and tablet views now includes all the 
-  information that was included in the navigation bar for the desktop mode. 
+* The sidebar navigation in mobile and tablet views now includes all the
+  information that was included in the navigation bar for the desktop mode.
   (reported: https://github.com/carpentries/workbench/issues/16#issuecomment-1165307355 by @Athanasiamo and #49, fixed: #50 by @zkamvar)
 
 # varnish 0.2.0
@@ -339,7 +339,7 @@ Added @robadob as a contributor.
 * The sidebar state (expanded or collapsed) will now persist during navigation
   to another page in the same window/tab. Opening the site in a new window/tab
   will reset the sidebar state to expanded. (reported: #43 by @anenadic, fixed
-  #46, @zkamvar). This fix uses the `sessionStorage` API. 
+  #46, @zkamvar). This fix uses the `sessionStorage` API.
 
 # varnish 0.1.16
 
@@ -355,7 +355,7 @@ Added @robadob as a contributor.
 
 # varnish 0.1.14
 
-* indicators for lesson development stage (pre-alpha, alpha, beta) have been 
+* indicators for lesson development stage (pre-alpha, alpha, beta) have been
   added as `<abbr>` elements with a link to the appropriate section in the CDH
   and `title` elements that describe the purpose of the stage. Visually hidden
   text follows the `<abbr>` element for users who can not perceive the lesson
@@ -374,7 +374,7 @@ Added @robadob as a contributor.
   (reported: #35 by @brownsarahm, fixed: #36 by @zkamvar)
 
 # varnish 0.1.11
- 
+
 * blockquotes are now more clearly delineated from the rest of the content
   (reported: #27 by @fiveop, fixed: #31 by @zkamvar)
 
@@ -388,7 +388,7 @@ Added @robadob as a contributor.
 
 # varnish 0.1.8
 
-* custom workbench engines are now properly linked in the footer via the 
+* custom workbench engines are now properly linked in the footer via the
   `sandpaper_cfg` `pegboard_cfg`, and `varnish_cfg` variables.
 * code of conduct link now points to the `CODE_OF_CONDUCT.md` file so authors
   can update or modify their own code of conduct (NOTE: all Carpentries lessons
@@ -406,7 +406,7 @@ Added @robadob as a contributor.
 # varnish 0.1.5
 
 * The index page now has specific sections for schedule and setup that link to
-  the `#schedule` and `#setup` anchors. This partially addresses 
+  the `#schedule` and `#setup` anchors. This partially addresses
   https://github.com/carpentries/sandpaper/issues/260
 
 # varnish 0.1.4
