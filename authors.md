@@ -42,12 +42,12 @@
 Source:
 [`DESCRIPTION`](https://github.com/ResearchCodingClub/uoy-varnish/blob/main/DESCRIPTION)
 
-Davey R, Becker E, Kamvar Z (2026). *uoyvarnish: Front-end for The
+Davey R, Becker E, Kamvar Z (2026). *varnish: Front-end for The
 Carpentries Lesson Infrastructure*. R package version 1.0.7,
 <https://github.com/ResearchCodingClub/uoy-varnish>.
 
     @Manual{,
-      title = {uoyvarnish: Front-end for The Carpentries Lesson Infrastructure},
+      title = {varnish: Front-end for The Carpentries Lesson Infrastructure},
       author = {Robert Davey and Erin Becker and Zhian N. Kamvar},
       year = {2026},
       note = {R package version 1.0.7},
