@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+
 mkdir -p inst/pkgdown/assets/assets/
 vend=source/javascripts/vendor
 cust=source/javascripts/custom
