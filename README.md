@@ -1,15 +1,15 @@
-# {uos_varnish}: Template for The Carpentries Workbench <img src='man/figures/logo.png' align='right' alt='' width=120 />
+# {uoy_varnish}: Template for The Carpentries Workbench <img src='man/figures/logo.png' align='right' alt='' width=120 />
 
-This project is a University of Sheffield themed fork of [{varnish}] from [The Carpentries
-Workbench](https://carpentries.github.io/workbench). It serves as a template
-for internally developed Carpentries style lessons. As this is a bespoke theme,
-it must be installed directly, rather than using the default that is installed
-via the [{sandpaper}] package.
+This project is a University of York themed fork [{varnish}] from [The
+Carpentries Workbench](https://carpentries.github.io/workbench) (derived from a
+similar fork by the [University of
+Sheffield](https://github.com/RSE-Sheffield/uos-varnish). It serves as a
+template for internally developed Carpentries style lessons. As this is a
+bespoke theme, it must be installed directly, rather than using the default
+that is installed via the [{sandpaper}] package.
 
-The changes to the theme replace The Carpentries branding with the University of
-Sheffield [brand toolkit](https://www.sheffield.ac.uk/brand-toolkit).
-Additionally, relevant additional links to training resources have been included
-in the footer.
+The changes to the theme replace The Carpentries branding with that of the
+University of York. 
 
 The html templates use [mustache templating
 language](https://mustache.github.io/mustache.5.html) while the CSS and
@@ -18,7 +18,7 @@ JavaScript are compiled and minified on GitHub Actions.
 ## Installation
 
 This fork of varnish should **not** be used in official carpentries repositories,
-it is intended for internally developed courses at the University of Sheffield.
+it is intended for internally developed courses at the University of York
 
 In order to use this fork of varnish you must update `config.yaml` to include the
 below lines under the `# Customisation` section (update `[user]` with your
@@ -26,7 +26,7 @@ user/organisation  and `[repo]` with the repository name replacing the line with
 a custom domain if required).
 
 ```yaml
-varnish: RSE-Sheffield/uos-varnish@main
+varnish: ResearchCodingClub/uoy-varnish@main
 url: '[user].github.io/[repo]'
 ```
 
@@ -46,7 +46,7 @@ packages are required. You can install the varnish system wide using [{devtools}
 
 ``` r
 > install.packages("devtools")
-> devtools::install_github("RSE-Sheffield/uos-varnish")
+> devtools::install_github("ResearchCodingClub/uoy-varnish")
 ```
 
 Alternatively you can install the varnish under a [{renv}].
@@ -63,7 +63,7 @@ Start R and install this varnish and the [{sandpaper}] package (which will pull 
 all dependencies) in the `renv` and snapshot it.
 
 ``` r
-> renv::install("RSE-Sheffield/uos-varnish")
+> renv::install("ResearchCodingClub/uoy-varnish")
 > options(repos = c(
     carpentries = "https://carpentries.r-universe.dev/",
     CRAN = "https://cran.rstudio.com/"))
@@ -78,7 +78,7 @@ You can now build and serve the pages with University of Sheffield varnish.
 ```
 
 **NB** If you find the varnish _isn't_ applied then you may need to first load
-the library with `library(uosvarnish)`.
+the library with `library(uoyvarnish)`.
 
 ## CSS and JavaScript
 
