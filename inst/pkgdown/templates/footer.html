@@ -1,13 +1,8 @@
 		<footer class="row footer mx-md-3">
 			<hr/>
-			<div class="col-md-2">
-        <a href="https://docs.hpc.shef.ac.uk/en/latest/stanage/index.html">
-          <img alt="Stanage HPC" src="https://docs.hpc.shef.ac.uk/en/latest/_images/Stanage_Black.png" style="width: 100%;">
-        </a>
-        <p><a href="https://sites.google.com/sheffield.ac.uk/research-training/research-training">Research Computing Training Home</a></p>
-			</div>
-			<div class="col-md-5">
-        <p>Lesson developed by <a href="https://rse.shef.ac.uk">RSE</a> &amp; <a href="https://www.sheffield.ac.uk/it-services/research">RIT</a></p>
+			<div class="col-md-6">
+        <p>Lesson developed by the <a href="https://researchcodingclub.github.io">University of York Research Coding Club</a></p>
+        <p>Building on material from <a href="https://fair2-for-research-software.github.io">FAIR<sup>2</sup> for Research Software</a>, <a href="https://rse.shef.ac.uk">University of Sheffield RSE</a> &amp; <a href="https://www.sheffield.ac.uk/it-services/research">RIT</a></p>
         {{#yaml}}
         <p>
           {{^old-url}}
@@ -35,7 +30,7 @@
         {{/yaml}}
         | <a href="mailto:{{#yaml}}{{contact}}{{/yaml}}">{{ translate.Contact }}</a> | <a href="https://carpentries.org/about/">{{ translate.About }}</a></p>
 		</div>
-		<div class="col-md-5">
+		<div class="col-md-6">
         {{#yaml}}{{#license}}
         <p>{{& translate.MaterialsLicensedUnder }}</p>
         {{/license}}{{/yaml}}
