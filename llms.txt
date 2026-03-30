@@ -87,7 +87,7 @@ varnish.
 
 **NB** If you find the varnish *isn’t* applied then you may need to
 first load the library with
-[`library(uoyvarnish)`](https://github.com/ResearchCodingClub/uoy-varnish).
+[`library(uoyvarnish)`](https://rdrr.io/r/base/library.html).
 
 ## CSS and JavaScript
 
