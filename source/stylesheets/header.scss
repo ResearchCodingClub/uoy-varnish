@@ -51,14 +51,15 @@
 }
 
 .progress {
-  background: $very-light-blue;
+  background: $rcc-teal;
   border-radius: 20px;
+  
   margin: 10px;
   height: 5px;
 }
 
 .progress-bar {
-  background: $dark-blue;
+  background: $rcc-dark-teal;
   border-radius: 20px;
   height:5px;
 }
@@ -375,7 +376,7 @@
   // border for the DOI button if present
   .top-nav {
     display: block;
-    border-top: 22px solid $dark-blue;
+    border-top: 22px solid $rcc-teal;
     .peer-reviewed {
       border-color: $dark-blue;
     }
@@ -470,7 +471,7 @@
 
   .top-nav {
     display: block;
-    border-top: 22px solid $dark-purple;
+    border-top: 22px solid $rcc-teal;
     padding-left: 40px;
     padding-top: 12px;
     padding-right: 20px

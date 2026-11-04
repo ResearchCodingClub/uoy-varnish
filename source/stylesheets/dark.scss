@@ -17,7 +17,7 @@ $color-mode-type: data;
     }
     .dropdown-menu .dropdown-item.active {
       color: #000;
-      background-color: shade-color($bright-blue, 10%);
+      background-color: shade-color($rcc-teal, 10%);
       .bi {
         fill: #000;
       }
@@ -456,10 +456,10 @@ $color-mode-type: data;
   }
 
   .progress {
-    background: tint-color($dark-blue, 10%);
+    background: tint-color($rcc-teal, 10%);
   }
   .progress-bar {
-    background: shade-color($blue, 20%);
+    background: shade-color($rcc-dark-teal, 20%);
   }
   .progress.library {
     background: tint-color($red, 20%);
@@ -523,7 +523,7 @@ $color-mode-type: data;
       color: var(--bs-body-color);
     }
     .top-nav {
-      border-top: 22px solid shade-color($blue, 20%);
+      border-top: 22px solid shade-color($rcc-dark-teal, 20%);
       .peer-reviewed {
         border-color: shade-color($blue, 20%);
       }
@@ -598,7 +598,7 @@ $color-mode-type: data;
 // From overview.scss
   .overview .card-header {
     color: var(--bs-body-color);
-    background: tint-color($dark-purple, 20%);
+    background: tint-color($rcc-teal, 20%);
   }
 
   .overview {
@@ -714,13 +714,13 @@ $color-mode-type: data;
 
 // Tab styling from tabs.scss
 .nav-tabs .nav-link.active {
-  border-top-color: shade-color($bright-blue, 20%);
+  border-top-color: shade-color($rcc-teal, 20%);
   border-right-color: var(--bs-border-color);
   border-left-color: var(--bs-border-color);
 }
 
 .nav-link[role="tab"][aria-selected="false"]:hover {
-  outline: 2px solid shade-color($bright-blue, 20%);
+  outline: 2px solid shade-color($rcc-teal, 20%);
 }
 
 div.tab-content {
