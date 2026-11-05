@@ -456,10 +456,10 @@ $color-mode-type: data;
   }
 
   .progress {
-    background: tint-color($rcc-teal, 10%);
+    background: shade-color($rcc-dark-teal, 20%);
   }
   .progress-bar {
-    background: shade-color($rcc-dark-teal, 20%);
+    background: shade-color($rcc-teal, 20%);
   }
   .progress.library {
     background: tint-color($red, 20%);
@@ -598,7 +598,7 @@ $color-mode-type: data;
 // From overview.scss
   .overview .card-header {
     color: var(--bs-body-color);
-    background: tint-color($rcc-teal, 20%);
+    background: tint-color($rcc-dark-teal, 20%);
   }
 
   .overview {
