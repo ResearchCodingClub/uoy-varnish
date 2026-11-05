@@ -42,11 +42,13 @@ followed to deploy locally or to GitHub pages.
 
 When rendering the site locally the varnish will not, by default, be applied since
 it is not available. A few extra steps to setup up and install the necessary
-packages are required. You can install the varnish system wide using [{devtools}]
+packages are required. You can install the varnish system wide using [{remotes}]
 
 ``` r
-> install.packages("devtools")
-> devtools::install_github("ResearchCodingClub/uoy-varnish")
+> install.packages("remotes")
+> remotes::install_github("ResearchCodingClub/uoy-varnish")
+# or
+> remotes::install_local("path/to/varnish")
 ```
 
 Alternatively you can install the varnish under a [{renv}].
